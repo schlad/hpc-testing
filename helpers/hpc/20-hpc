@@ -19,3 +19,7 @@
 # Test functions for phase 20
 #
 #########################
+
+mrsh_hello_world() {
+	date
+}

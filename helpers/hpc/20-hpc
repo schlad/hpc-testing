@@ -20,6 +20,17 @@
 #
 #########################
 
+master_HOST1=master-node00
+slave_HOST1=slave-node00
+slave_HOST2=slave-node01
+slave_HOST3=slave-node02
+
+scp /tmp/simple_mpi root@$slave_HOST1:/tmp/
+scp /tmp/simple_mpi root@$slave_HOST2:/tmp/
+scp /tmp/simple_mpi root@$slave_HOST3:/tmp/
+
 openmpi3_hello_world() {
-	date
+
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64/mpi/gcc/openmpi3/bin/ && /usr/lib64/mpi/gcc/openmpi3/bin/mpirun --allow-run-as-root --host $slave_HOST1,$slave_HOST2 /tmp/simple_mpi
+
 }

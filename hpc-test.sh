@@ -139,11 +139,6 @@ phase_20(){
 	tmp=$(cpuid -1 | sed -n 2,5p);
 	juLog -name="CPUID: $tmp" cpuid -1
 
-	master_HOST1=master-node00
-	slave_HOST1=slave-node00
-	slave_HOST2=slave-node01
-	slave_HOST3=slave-node02
-
 	juLog -name="openmpi3: hello world" openmpi3_hello_world
 }
 run_phase 20 phase_20 "HPC"

@@ -139,6 +139,6 @@ phase_20(){
 	tmp=$(cpuid -1 | sed -n 2,5p);
 	juLog -name="CPUID: $tmp" cpuid -1
 
-	juLog -name="MRSH hello world" mrsh_hello_world
+	juLog -name="MRSH login" mrsh_login
 }
 run_phase 20 phase_20 "HPC"

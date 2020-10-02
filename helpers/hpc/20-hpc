@@ -20,6 +20,9 @@
 #
 #########################
 
-mrsh_hello_world() {
+mrsh_login() {
 	date
+	ssh root@$HOST2 'systemctl start mrlogind.socket mrshd.socket'
+	su nobody
+	mrlogin $HOST2
 }

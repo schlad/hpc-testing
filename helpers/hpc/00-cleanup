@@ -23,6 +23,6 @@
 get_package_list()
 {
 	PACKAGE_LIST=$(get_common_package_list $1)
-	PACKAGE_LIST+=" cpuid mrsh mrsh-server "
+	PACKAGE_LIST+=" cpuid openmpi3 openmpi3-devel gcc pmix"
 	echo $PACKAGE_LIST
 }

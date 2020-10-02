@@ -20,9 +20,6 @@
 #
 #########################
 
-mrsh_login() {
+openmpi3_hello_world() {
 	date
-	ssh root@$HOST2 'systemctl start mrlogind.socket mrshd.socket'
-	su nobody
-	mrlogin $HOST2
 }

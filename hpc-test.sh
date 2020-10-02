@@ -144,6 +144,6 @@ phase_20(){
 	slave_HOST2=slave-node01
 	slave_HOST3=slave-node02
 
-	juLog -name="PMIx" mrsh_login
+	juLog -name="openmpi3: hello world" openmpi3_hello_world
 }
 run_phase 20 phase_20 "HPC"
